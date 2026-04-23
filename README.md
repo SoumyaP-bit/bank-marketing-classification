@@ -1,35 +1,18 @@
-# bank-marketing-classification
+# Bank Marketing Campaign — Comparing Classifiers
 
-Comparing Classifiers: Bank Marketing Campaign
-Overview
-This project compares four classification models:
-K-Nearest Neighbors (KNN)
-Logistic Regression
-Decision Tree
-Support Vector Machine (SVM)
-The goal is to predict whether a customer will subscribe to a term deposit after a phone-based marketing campaign.
-Business Problem
-A bank wants to improve the efficiency of its telephone marketing campaigns. By identifying customers who are more likely to subscribe, the bank can focus outreach efforts more effectively, reduce unnecessary calls, and improve conversion rates.
-Dataset
-The data comes from the UCI Bank Marketing dataset, based on direct marketing campaigns from a Portuguese banking institution.
-Models Compared
-Logistic Regression
-KNN
-Decision Tree
-SVM
-Evaluation Metric
-Because the dataset is imbalanced, accuracy alone is not enough. This project emphasizes:
-Recall
-F1-score
-ROC-AUC
-Recall is especially important because missing likely subscribers means lost business opportunities.
-Summary of Findings
-Logistic Regression performed well and was highly interpretable.
-Decision Tree was easy to explain but more prone to overfitting.
-KNN was computationally heavier and less practical on larger data.
-SVM performed competitively but required more computation and tuning.
-Overall, the best model should be selected based on a balance of predictive performance and business interpretability.
-Business Recommendations
-Use the top-performing model to prioritize likely subscribers.
-Focus campaign resources on high-probability customers.
-Continue testing more advanced ensemble methods in future work.
+## Business Problem
+A bank wants to improve the efficiency of its telephone marketing campaigns. By identifying customers who are more likely to subscribe to a term deposit, the bank can focus outreach efforts more effectively, reduce unnecessary calls, and improve conversion rates.
+
+## Research Question
+**Which classification model best predicts whether a customer will subscribe to a term deposit after a phone-based marketing campaign?**
+
+## Dataset
+- **Source:** [UCI Bank Marketing Dataset](https://archive.ics.uci.edu/ml/datasets/bank+marketing)
+- **Size:** ~41,000 records
+- **Target Variable:** `y` — whether the client subscribed to a term deposit (`yes` / `no`)
+- **Class Imbalance:** ~89% No / ~11% Yes
+- **Note:** `duration` column was excluded per UCI documentation — it causes data leakage as it is only known after the call ends
+
+> The dataset CSV is not included in this repository. Download `bank-additional-full.csv` from the UCI link above and place it in a `data/` folder before running the notebook.
+
+## Repository Structure
